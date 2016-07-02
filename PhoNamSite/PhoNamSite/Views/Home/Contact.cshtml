@@ -1,0 +1,52 @@
+﻿@model PhoNamSite.Models.ContactModels
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box3">
+    <h1>Contact Us</h1>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div class="row">
+            @Html.LabelFor(model => model.FirstName, "First Name:")
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
+        @Html.ValidationSummary(true)
+        <div class="row">
+            @Html.LabelFor(model => model.LastName, "Last Name:")
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
+        @Html.ValidationSummary(true)
+        <div class="row">
+            @Html.LabelFor(model => model.Email, "Email:")
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+        @Html.ValidationSummary(true)
+        <div class="row">
+            @Html.LabelFor(model => model.Comment, "Comments:")
+            @Html.TextAreaFor(model => model.Comment)
+            @Html.ValidationMessageFor(model => model.Comment)
+        </div>
+        <div class="row">
+            <input type="submit" value="submit" />
+            <input type="reset" value="reset" />
+        </div>
+    }
+
+    <address>
+        Pho Nam Noodle House<br />
+        610 Junction Road<br />
+        <abbr title="Phone">P:</abbr>
+        608-556-3222
+    </address>
+
+</div>
+@*<address>
+    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>*@

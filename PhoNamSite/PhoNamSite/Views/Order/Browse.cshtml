@@ -1,0 +1,66 @@
+﻿@model PhoNamSite.Models.MenuProduct
+
+@{
+    ViewBag.Title = "Browse";
+}
+<h2>Browsing Item: @Model.ProductName</h2>
+
+<body>
+
+<div class="box3">
+
+    <h1>
+        Your are looking at: (@Model.MenuID)@Model.ProductName
+    </h1>
+    <h3>
+        Price: $@Model.UnitPrice
+    </h3>
+    @if (Model.Description != null)
+    {
+
+        <h1>
+            Description: @Model.Description
+        </h1>
+    }
+    @if (Model.ImagePath != null)
+    {
+    <div class="boxImages">
+        <center>
+                <img src="\Images\@Model.ImagePath" style="width:400px;height:325px;">
+        </center>
+    </div>
+    }
+</div>
+    
+
+
+
+</body>
+
+
+
+
+
+
+
+
+@*<ul>
+    @foreach(var menuitem in Model.MenuProducts)
+    {
+        <li>
+            <strong>
+                @menuitem.ProductName 
+                $(@menuitem.UnitPrice)
+            </strong>
+            <p class="button">
+                @Html.ActionLink("Add to cart", "AddToCart", "ShoppingCart", new { id = menuitem.ProductID }, "")
+            </p>
+        </li>
+        if(menuitem.Description != null)
+        {
+        <li>
+            @menuitem.Description
+        </li>
+            }
+        }
+</ul>*@

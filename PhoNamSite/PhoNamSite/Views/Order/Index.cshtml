@@ -1,0 +1,250 @@
+﻿@model IEnumerable<PhoNamSite.Models.MenuProduct>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body class="mainbg2">      
+<center>
+
+    @*<body class="mainbg2">*@            
+                
+                    <div class="container">
+                        <h2>Menu</h2>
+                        <button type="button" class="btn-lg" data-toggle="collapse" data-target="#demo">Appetizers </button>
+                        <div id="demo" class="collapse">
+
+                            <div class="box3">
+
+                            @foreach (var menuproducts in Model)
+                            {
+                                if (menuproducts.CategoryID == 1)
+                                {
+                                    <p>
+                                        <hbig>(<strong><a href=@("http://localhost:5079/Order/Browse?product=" + (@menuproducts.MenuID))>@menuproducts.MenuID</a></strong>)</hbig>
+                                        <hbig><strong>@menuproducts.ProductName</strong></hbig>
+                                        <hbig>$@menuproducts.UnitPrice</hbig>
+                                    </p>
+
+                                }
+                            }
+                            </div>
+                        </div>
+                    </div>
+               
+
+
+
+        <div class="container">
+            <center><button type="button" class="btn-lg" data-toggle="collapse" data-target="#demo2">Pho Noodle Soups </button></center>
+            <div id="demo2" class="collapse">
+
+                <div class="box3">
+                    @foreach (var menuproducts in Model)
+                    {
+                        if (menuproducts.CategoryID == 2)
+                        {
+                            <p>
+                                <hbig>(<strong><a href=@("http://localhost:5079/Order/Browse?product=" + (@menuproducts.MenuID))>@menuproducts.MenuID</a></strong>)</hbig>
+                                <hbig><strong>@menuproducts.ProductName</strong></hbig>
+                                <hbig>$@menuproducts.UnitPrice</hbig>
+                            </p>
+
+                        }
+                    }
+                    </div>
+                </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="btn-lg" data-toggle="collapse" data-target="#demo3">Oriental Noodle Soups </button>
+            <div id="demo3" class="collapse">
+
+                <div class="box3">
+                    @foreach (var menuproducts in Model)
+            {
+                if (menuproducts.CategoryID == 3)
+                {
+                            <p>
+                                <hbig>(<strong><a href=@("http://localhost:5079/Order/Browse?product=" + (@menuproducts.MenuID))>@menuproducts.MenuID</a></strong>)</hbig>
+                                <hbig><strong>@menuproducts.ProductName</strong></hbig>
+                                <hbig>$@menuproducts.UnitPrice</hbig>
+                            </p>
+
+                        }
+                    }
+                    </div>
+                </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="btn-lg" data-toggle="collapse" data-target="#demo4">Rice Vermicelli Noodles</button>
+            <div id="demo4" class="collapse">
+
+                <div class="box3">
+                    @foreach (var menuproducts in Model)
+            {
+                if (menuproducts.CategoryID == 4)
+                {
+                            <p>
+                                <hbig>(<strong><a href=@("http://localhost:5079/Order/Browse?product=" + (@menuproducts.MenuID))>@menuproducts.MenuID</a></strong>)</hbig>
+                                <hbig><strong>@menuproducts.ProductName</strong></hbig>
+                                <hbig>$@menuproducts.UnitPrice</hbig>
+                            </p>
+
+                        }
+                    }
+                    </div>
+                </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="btn-lg" data-toggle="collapse" data-target="#demo5">Rice Dishes </button>
+            <div id="demo5" class="collapse">
+
+                <div class="box3">
+                    @foreach (var menuproducts in Model)
+            {
+                if (menuproducts.CategoryID == 5)
+                {
+                            <p>
+                                <hbig>(<strong><a href=@("http://localhost:5079/Order/Browse?product=" + (@menuproducts.MenuID))>@menuproducts.MenuID</a></strong>)</hbig>
+                                <hbig><strong>@menuproducts.ProductName</strong></hbig>
+                                <hbig>$@menuproducts.UnitPrice</hbig>
+                            </p>
+
+                        }
+                    }
+                    </div>
+                </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="btn-lg" data-toggle="collapse" data-target="#demo6">Stir Fried Noodles </button>
+            <div id="demo6" class="collapse">
+
+                <div class="box3">
+                    @foreach (var menuproducts in Model)
+            {
+                if (menuproducts.CategoryID == 6)
+                {
+                            <p>
+                                <hbig>(<strong><a href=@("http://localhost:5079/Order/Browse?product=" + (@menuproducts.MenuID))>@menuproducts.MenuID</a></strong>)</hbig>
+                                <hbig><strong>@menuproducts.ProductName</strong></hbig>
+                                <hbig>$@menuproducts.UnitPrice</hbig>
+                            </p>
+
+                        }
+                    }
+                    </div>
+                </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="btn-lg" data-toggle="collapse" data-target="#demo7">Vegetarian </button>
+            <div id="demo7" class="collapse">
+
+                <div class="box3">
+                    @foreach (var menuproducts in Model)
+            {
+                if (menuproducts.CategoryID == 7)
+                {
+                            <p>
+                                <hbig>(<strong><a href=@("http://localhost:5079/Order/Browse?product=" + (@menuproducts.MenuID))>@menuproducts.MenuID</a></strong>)</hbig>
+                                <hbig><strong>@menuproducts.ProductName</strong></hbig>
+                                <hbig>$@menuproducts.UnitPrice</hbig>
+                            </p>
+
+                        }
+                    }
+                    </div>
+                </div>
+        </div>
+        <div class="container">
+            <button type="button" class="btn-lg" data-toggle="collapse" data-target="#demo8">Desserts </button>
+            <div id="demo8" class="collapse">
+
+                <div class="box3">
+                    @foreach (var menuproducts in Model)
+            {
+                if (menuproducts.CategoryID == 8)
+                {
+                            <p>
+                                <hbig>(<strong><a href=@("http://localhost:5079/Order/Browse?product=" + (@menuproducts.MenuID))>@menuproducts.MenuID</a></strong>)</hbig>
+                                <hbig><strong>@menuproducts.ProductName</strong></hbig>
+                                <hbig>$@menuproducts.UnitPrice</hbig>
+                            </p>
+
+                        }
+                    }
+                    </div>
+                </div>
+        </div>
+
+        <div class="container">
+            <button type="button" class="btn-lg" data-toggle="collapse" data-target="#demo9">Beverages </button>
+            <div id="demo9" class="collapse">
+
+                <div class="box3">
+                    @foreach (var menuproducts in Model)
+            {
+                if (menuproducts.CategoryID == 9)
+                {
+                            <p>
+                                <hbig>(<strong><a href=@("http://localhost:5079/Order/Browse?product=" + (@menuproducts.MenuID))>@menuproducts.MenuID</a></strong>)</hbig>
+                                <hbig><strong>@menuproducts.ProductName</strong></hbig>
+                                <hbig>$@menuproducts.UnitPrice</hbig>
+                            </p>
+
+                        }
+                    }
+                    </div>
+                </div>
+        </div>
+    @*</body>*@
+
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+@*@foreach (var category in Model)
+    {<center>
+            <ul>
+
+                <h3>
+                    <a href=@("http://localhost:5079/Order/Browse?category=" + (@category.CategoryName))>@category.CategoryName</a>
+                </h3>
+
+            </ul>
+        </center>
+
+    }*@
+
+
+
+
+
+

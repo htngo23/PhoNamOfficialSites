@@ -1,0 +1,60 @@
+﻿@model IEnumerable<PhoNamSite.Models.FoodItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div class="box3">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Food)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quanity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MeasurementType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LatestPurchase)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpirationTime)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Food)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quanity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MeasurementType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LatestPurchase)
+                </td>
+                <td>
+                    <h5>@Html.DisplayFor(modelItem => item.ExpirationTime) Days</h5>
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
